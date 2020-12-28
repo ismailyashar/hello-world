@@ -4,22 +4,23 @@ variable "deployment_environment" {
 }
 
 variable "deployment_name" {
-    default = "ismailyashar.com"
+    default = "hello-world"
     description = "- (Optional) The name of the deployment."
 }
 
 variable "deployment_image" {
-    default = "docker.fuchicorp.com/hello-world-app-dev-feature:4b7aacb"
+    default = "fsadykov/hello-world:latest"
     description = "- (Optional) The docker image of the deployment."
 }
 
 variable "deployment_endpoint" {
     type = "map"
+
     default = {
-        dev     = "dev.hello"
-        qa      = "qa.hello"
-        prod    = "hello"
-        stage   = "stage.hello"
+        dev     = "dev.hello.ismailyashar.com"
+        qa      = "qa.hello.ismailyashar.com"
+        prod    = "hello.ismailyashar.com"
+        stage   = "stage.hello.ismailyashar.com"
     }
 
     description = "- (Optional) The endpooint of the deployment."
